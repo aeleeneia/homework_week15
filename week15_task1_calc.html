@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator_week15</title>
+    <link rel="stylesheet" href="week15_task1_calc.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <h1>Калькулятор</h1>
+        <div class="calculator__input-group">
+            <div>
+                <label for="input-num-one">Введите первое число:</label>
+                <input type="number" id="input-num-one" class="calculator__input-num">
+            </div>
+        </div>
+        <div class="calculator__input-group">
+            <div>
+                <label for="input-num-two">Введите второе число:</label>
+                <input type="number" id="input-num-two" class="calculator__input-num">
+            </div>
+        </div>
+        <div class="calculator__operators">
+            <button class="calculator__button" id="button-plus" onclick="calcSum(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/plus-emoji.png" />
+            </button>
+            <button class="calculator__button" id="button-minus" onclick="calcMinus(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/minus-emoji.png" />
+            </button>
+            <button class="calculator__button" id="button-multiply" onclick="calcMultiply(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/multiply-emoji.png" />
+            </button>
+            <button class="calculator__button" id="button-divide" onclick="calcDivision(numOne, numTwo)">
+                <img src="https://img.icons8.com/emoji/48/000000/divide-emoji.png" />
+            </button>
+        </div>
+        <div class="result">
+            <span>Результат: </span>
+            <div class="result__calc">0</div>
+        </div>
+    </div>
+    <script>
+        let numOne = document.querySelector('#input-num-one');
+        let numTwo = document.querySelector('#input-num-two');
+
+        const buttonPlus = document.querySelector('#button-plus');
+        const buttonMinus = document.querySelector('#button-minus');
+        const buttonMultiply = document.querySelector('#button-multiply');
+        const buttonDivide = document.querySelector('#button-divide');
+        const calcResult = document.querySelector('.result__calc');
+
+        function calcSum(numOne, numTwo) {
+            const result = +numOne.value + +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
+        function calcMinus(numOne, numTwo) {
+            const result = +numOne.value - +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
+        function calcMultiply(numOne, numTwo) {
+            const result = +numOne.value * +numTwo.value;
+            calcResult.innerHTML = result;
+        }
+
+        function calcDivision(numOne, numTwo) {
+            const result = +numOne.value / +numTwo.value;
+            calcResult.innerHTML = result;
+            if (result == Infinity) {
+                const result = ("На ноль делить нельзя!");
+                calcResult.innerHTML = result;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
