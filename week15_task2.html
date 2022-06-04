@@ -7,35 +7,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Форма регистрации</title>
-    <link rel="stylesheet" href="week15_task2.css">
+    <link rel="stylesheet" type="text/css" href="week15_task2.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="normalize.css">
+    <script src="https://kit.fontawesome.com/ab99985616.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="container">
+        <header class="header">
+            <img class="header__logo"
+                src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black-768x230.png"
+                alt="spotifyLogo">
+            <h1 class="header__title">Sign up for free to start listening.</h1>
+        </header>
         <form>
+            <div class="buttons-social">
+                <a class="btn btn-primary btn-lg btn-round button-fb" href="#" role="button"><i
+                        class="fa-brands fa-facebook"></i>Sign up
+                    with
+                    Facebook</a>
+            </div>
+            <div>
+                <a class="btn btn-primary btn-lg btn-round btn-google" href="#" role="button"><i
+                        class=" fa-brands fa-google"></i>Sign up
+                    with
+                    Google</a>
+            </div>
+            <div class="divider">
+                <span class="divider-text">or</span>
+            </div>
+            <h4>Sign up with your email address</h4>
             <div class="form-group">
-                <label for="exampleInputEmail1">What's your email?</label>
-                <input type="email" class="form-control" placeholder="Enter your email." id="exampleInputEmail1">
+                <label class="form-question" for="exampleInputEmail1">What's your email?</label>
+                <input type="email" class="form-control col-form-label-lg" placeholder="Enter your email."
+                    id="exampleInputEmail1">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail2">Confirm your email</label>
-                <input type="email" class="form-control" placeholder="Enter your email again." id="exampleInputEmail2">
+                <label class="form-question" for="exampleInputEmail2">Confirm your email</label>
+                <input type="email" class="form-control col-form-label-lg" placeholder="Enter your email again."
+                    id="exampleInputEmail2">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">Create a password</label>
-                <input type="password" class="form-control" placeholder="Create a password." id="exampleInputPassword1">
+                <label class="form-question" for="exampleInputPassword">Create a password</label>
+                <input type="password" class="form-control col-form-label-lg" placeholder="Create a password."
+                    id="exampleInputPassword">
             </div>
             <div class="form-group">
-                <label for="exampleInputUserName">What should we call you?</label>
-                <input type="text" class="form-control" placeholder="Enter a profile name." id="exampleInputUserName">
+                <label class="form-question" for="exampleInputUserName">What should we call you?</label>
+                <input type="text" class="form-control col-form-label-lg" placeholder="Enter a profile name."
+                    id="exampleInputUserName">
                 <small id="userNamelHelp" class="form-text">This appears on your profile.</small>
             </div>
             <div class="form-row">
+                <label class="col-md-12 form-text form-question">What's your date of birth?</label>
                 <div class="form-group col-md-5 dropdown">
                     <label for="inputMonth">Month</label>
-                    <select class="form-control" placeholder="Month" id="inputMonth">
+                    <select class="form-control col-form-label-lg" placeholder="Month" id="inputMonth">
                         <option selected disabled>Month</option>
                         <option>January</option>
                         <option>February</option>
@@ -53,29 +82,55 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label for="inputDay">Day</label>
-                    <input inputmode="numeric" maxlength="2" id="inputDay" class="form-control" placeholder="DD">
+                    <input inputmode="numeric" maxlength="2" id="inputDay" class="form-control col-form-label-lg"
+                        placeholder="DD">
                     </input>
                 </div>
                 <div class="form-group col-md-4">
                     <label for="inputYear">Year</label>
-                    <input inputmode="numeric" minlength="4" maxlength="4" class="form-control" id="inputYear"
-                        placeholder="YYYY">
+                    <input inputmode="numeric" minlength="4" maxlength="4" class="form-control col-form-label-lg"
+                        id="inputYear" placeholder="YYYY">
                 </div>
-                <div class="form-group form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <div class="form-row">
+                <label class="col-md-12 form-question">What's your gender?</label>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="genderMale" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="genderMale">Male</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="genderFemale" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="genderFemale">Female</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                    <input type="radio" id="genderNonbinary" name="customRadioInline1" class="custom-control-input">
+                    <label class="custom-control-label" for="genderNonbinary">Non-binary</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="custom-control custom-checkbox">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Share my registration data with Spotify's
+                        content providers for marketing purposes.</label>
+                </div>
+            </div>
+            <p class="terms-text">By clicking on sign-up, you agree to Spotify's <span class="termsAndConditions">Terms
+                    and Conditions of Use</span>.</p>
+            <p class="privacyPolicy-text">To learn more about how Spotify collects, uses, shares and protects your
+                personal data, please see
+                Spotify's Privacy Policy.</p>
+            <div id="errorMessage"></div>
+            <button type="submit" class="btn btn-primary btn-round" onclick="check();">Sign up</button>
+
         </form>
-    </div>
 
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+        <script src="week15_task2.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+            </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+            </script>
 </body>
 
 </html>

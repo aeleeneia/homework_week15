@@ -45,14 +45,10 @@
         </div>
     </div>
     <script>
-        let numOne = document.querySelector('#input-num-one');
-        let numTwo = document.querySelector('#input-num-two');
+        const numOne = document.querySelector('#input-num-one');
+        const numTwo = document.querySelector('#input-num-two');
 
-        const buttonPlus = document.querySelector('#button-plus');
-        const buttonMinus = document.querySelector('#button-minus');
-        const buttonMultiply = document.querySelector('#button-multiply');
-        const buttonDivide = document.querySelector('#button-divide');
-        const calcResult = document.querySelector('.result__calc');
+        let calcResult = document.querySelector('.result__calc');
 
         function calcSum(numOne, numTwo) {
             const result = +numOne.value + +numTwo.value;
@@ -70,12 +66,13 @@
         }
 
         function calcDivision(numOne, numTwo) {
-            const result = +numOne.value / +numTwo.value;
-            calcResult.innerHTML = result;
-            if (result == Infinity) {
-                const result = ("На ноль делить нельзя!");
-                calcResult.innerHTML = result;
+            let result;
+            if (+numTwo.value == 0) {
+                result = ("На ноль делить нельзя!");
+            } else {
+                result = +numOne.value / +numTwo.value
             }
+            calcResult.innerHTML = result;
         }
 
     </script>
