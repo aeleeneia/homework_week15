@@ -44,22 +44,26 @@
                 <input type="email" class="form-control col-form-label-lg" placeholder="Enter your email."
                     id="exampleInputEmail1">
             </div>
+            <div id="errorMessage1"></div>
             <div class="form-group">
                 <label class="form-question" for="exampleInputEmail2">Confirm your email</label>
                 <input type="email" class="form-control col-form-label-lg" placeholder="Enter your email again."
                     id="exampleInputEmail2">
             </div>
+            <div id="errorMessage2"></div>
             <div class="form-group">
                 <label class="form-question" for="exampleInputPassword">Create a password</label>
                 <input type="password" class="form-control col-form-label-lg" placeholder="Create a password."
                     id="exampleInputPassword">
             </div>
+            <div id="errorMessage3"></div>
             <div class="form-group">
                 <label class="form-question" for="exampleInputUserName">What should we call you?</label>
                 <input type="text" class="form-control col-form-label-lg" placeholder="Enter a profile name."
                     id="exampleInputUserName">
                 <small id="userNamelHelp" class="form-text">This appears on your profile.</small>
             </div>
+            <div id="errorMessage4"></div>
             <div class="form-row">
                 <label class="col-md-12 form-text form-question">What's your date of birth?</label>
                 <div class="form-group col-md-5 dropdown">
@@ -92,20 +96,25 @@
                         id="inputYear" placeholder="YYYY">
                 </div>
             </div>
-            <div class="form-row">
+            <div id="errorMessage5"></div>
+            <div class="form-row" id="radioButtonsGender">
                 <label class="col-md-12 form-question">What's your gender?</label>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="genderMale" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="genderMale" name="customRadioInline1" class="custom-control-input"
+                        value="male">
                     <label class="custom-control-label" for="genderMale">Male</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="genderFemale" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="genderFemale" name="customRadioInline1" class="custom-control-input"
+                        value="female">
                     <label class="custom-control-label" for="genderFemale">Female</label>
                 </div>
                 <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="genderNonbinary" name="customRadioInline1" class="custom-control-input">
+                    <input type="radio" id="genderNonbinary" name="customRadioInline1" class="custom-control-input"
+                        value="nonBinary">
                     <label class="custom-control-label" for="genderNonbinary">Non-binary</label>
                 </div>
+                <div id="errorMessage6"></div>
             </div>
             <div class="form-row">
                 <div class="custom-control custom-checkbox">
@@ -119,7 +128,6 @@
             <p class="privacyPolicy-text">To learn more about how Spotify collects, uses, shares and protects your
                 personal data, please see
                 Spotify's Privacy Policy.</p>
-            <div id="errorMessage"></div>
         </form>
         <button type="button" class="btn btn-primary btn-round btn-signup" onclick="check();">Sign up</button>
     </div>
