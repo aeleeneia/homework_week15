@@ -5,7 +5,7 @@ function check()
     let password = document.getElementById("exampleInputPassword");
     let userName = document.getElementById("exampleInputUserName");
 
-    document.getElementById(`errorMessage`).innerHTML= "";
+    document.getElementById('errorMessage').innerHTML = "";
 
     if(email1.value == '') {
         document.getElementById('errorMessage').innerHTML += "Ваш email не заполнен<br>";
@@ -18,6 +18,4 @@ function check()
     if(password.value.length<=5) {
         document.getElementById('errorMessage').innerHTML += "Ваш пароль слишком короткий<br>";
     }
-
-
-}
+} 
