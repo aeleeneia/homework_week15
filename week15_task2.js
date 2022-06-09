@@ -1,4 +1,4 @@
-let userGender = document.getElementsByName("customRadioInline1").checked;
+let userGender = document.getElementsByName("customRadioInline1").find((element) => element.checked);
 
 
 function check()
@@ -10,7 +10,7 @@ function check()
     let birthMonth = document.getElementById("inputMonth");
     let birthDay = document.getElementById("inputDay");
     let birthYear = document.getElementById("inputYear");
-    let userGender = document.getElementsByName("customRadioInline1").checked;
+    // let userGender = document.getElementsByName("customRadioInline1").find((element) => element.checked);
 
     // document.getElementById('errorMessage').innerHTML = "";
     document.getElementById('errorMessage1').innerHTML = "";
@@ -18,7 +18,7 @@ function check()
     document.getElementById('errorMessage3').innerHTML = "";
     document.getElementById('errorMessage4').innerHTML = "";
     document.getElementById('errorMessage5').innerHTML = "";
-
+    document.getElementById('errorMessage6').innerHTML = "";
 
     if(email1.value == '') {
         document.getElementById('errorMessage1').innerHTML += "You need to enter your email.<br>";
@@ -62,7 +62,7 @@ function check()
     }
 
     if(userGender.value == '') {
-        document.getElementById('errorMessage6').innerHTML += "Enter a valid year.<br>";
+        document.getElementById('errorMessage6').innerHTML += "Select your gender.<br>";
     }
 
     

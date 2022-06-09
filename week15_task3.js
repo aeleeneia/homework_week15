@@ -1,5 +1,3 @@
-// let background = document.getElementById('background');
-// let themeColor = document.getElementById('backgroundTheme');
 
 function changeTheme() {
     switch (document.getElementById("backgroundTheme").value) {
